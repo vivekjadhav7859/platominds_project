@@ -17,7 +17,7 @@ const Services = () => {
         </h1>
         <hr className="lg:w-1/5 w-1/3 md:w-1/5 mx-auto shadow-2xl" />
 
-        <div className="grid grid-cols-1 lg:grid-cols-4 lg:gap-5 justify-items-center mt-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-5 justify-items-center mt-10">
           {ServicesData.map((currElem: any) => {
             const { image, title, description, url } = currElem;
             return (
