@@ -7,7 +7,6 @@ import slides from "../../api/imagegallery/OpenLandsImageGalleryApi";
 const OpenLands = () => {
   return (
     <>
-      <Navbar />
       <div className="mt-16 mb-8 shadow-lg lg:mx-14 pb-4">
         <ImageGallery data={slides} />
         <div className="">
@@ -45,7 +44,6 @@ const OpenLands = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

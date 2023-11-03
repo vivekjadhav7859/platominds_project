@@ -6,7 +6,7 @@ import { FiMenu } from "react-icons/fi";
 import { IoCloseOutline } from "react-icons/io5";
 import clsx from "clsx";
 import Image from "next/image";
-import logo from '@/app/assets/Navbar/logo.png'
+import logo from '../../public/Navbar/logo.png'
 export default function Navbar() {
   const [isSideMenuOpen, setMenu] = useState(false);
 
@@ -51,7 +51,7 @@ export default function Navbar() {
             </section>
           {navlinks.map((d, i) => (
             <Link
-              key={i}
+              key={`nav_${i}`}
               className="hidden lg:block  text-gray-700 uppercase hover:text-orange-500 hover:font-bold"
               href={d.link}
             >

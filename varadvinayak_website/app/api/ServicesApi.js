@@ -9,9 +9,9 @@ const ServicesApi = [
     {
         // id: 2,
         image: "https://images.pexels.com/photos/18821289/pexels-photo-18821289/free-photo-of-building-with-apartments.jpeg",
-        title: 'Cummercial Sites',
+        title: 'Commercial Sites',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit Qui Lorem ipsum dolor sit amet consectetur adipisicing elit.fioh asfihgsdfgi sdh giosidfo sihg siohg0ayef adshfo aohdfo0-e-f uoasdihfoihas df',
-        url: '/services/cummercial'
+        url: '/services/commercial'
     },
     {
         // id: 3,

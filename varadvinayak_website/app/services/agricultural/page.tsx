@@ -1,13 +1,10 @@
-import Footer from "@/app/components/Footer";
 import ImageGallery from "@/app/components/ServicesImageGallery";
-import Navbar from "@/app/components/Navbar";
 import React from "react";
 import slides from "../../api/imagegallery/AgriculturalImageGalleryApi";
 
 const Agricultural = () => {
   return (
     <>
-      <Navbar />
       <div className="mt-16 mb-8 shadow-lg lg:mx-14 pb-4">
         <ImageGallery data={slides} />
         <div className="">
@@ -45,7 +42,6 @@ const Agricultural = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

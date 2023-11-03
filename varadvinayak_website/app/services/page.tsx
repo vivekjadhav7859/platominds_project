@@ -18,10 +18,10 @@ const Services = () => {
         <hr className="lg:w-1/5 w-1/3 md:w-1/5 mx-auto shadow-2xl" />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-5 justify-items-center mt-10">
-          {ServicesData.map((currElem: any) => {
+          {ServicesData.map((currElem: any, index) => {
             const { image, title, description, url } = currElem;
             return (
-              <>
+              <div key={`services_${index}`}>
                 <div className="py-10">
                   <div className="rounded overflow-hidden shadow-lg max-w-sm">
                     <img src={image} />
@@ -42,7 +42,7 @@ const Services = () => {
                     </div>
                   </div>
                 </div>
-              </>
+              </div>
             );
           })}
           ;
