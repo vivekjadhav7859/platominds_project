@@ -81,7 +81,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-col justify-center items-center text-center   bg-gray-50">
           <h1 className=" text-gray-800 font-semibold">
-            © 2023-2024 All rights reserved | Build with ❤ by{" "}
+            © 2023-2024 All rights reserved | Build with <span className="text-red-600">❤</span> by{" "}
             <span className="hover:text-orange-500 font-semibold cursor-pointer pb-3">
               Wisnolect
             </span>

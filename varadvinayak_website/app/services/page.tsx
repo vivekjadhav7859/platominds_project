@@ -10,7 +10,6 @@ const Services = () => {
   const [ServicesData, setServicesData] = useState(ServicesApi);
   return (
     <>
-      <Navbar />
       <section>
         <h1 className="mt-[5rem] mb-2 text-center capitalize text-4xl font-bold text-orange-600">
           Our Services
@@ -45,10 +44,9 @@ const Services = () => {
               </div>
             );
           })}
-          ;
+          
         </div>
       </section>
-      <Footer />
     </>
   );
 };
