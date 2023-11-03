@@ -19,16 +19,16 @@ export default function Home() {
       <Suspense fallback={<div>Loading...</div>}>
         <Videos />
       </Suspense>
-      <div className="w-full flex flex-col items-center gap-10 lg:flex-row lg:justify-around p-6 bg-black">
-        <div className="w-[180px] h-[180px] flex flex-col justify-center items-center rounded-full bg-[#baf2f7] hover:bg-[#026a74] cursor-pointer animate-pulse hover:animate-none my_shadow_for_icon hover:text-white">
+      <div className="w-full flex flex-col items-center gap-10 lg:flex-row lg:justify-around p-6 bg-gray-400">
+        <div className="w-[180px] h-[180px] flex flex-col justify-center items-center rounded-full bg-orange-600 cursor-pointer hover:animate-none my_shadow_for_icon  hover:bg-orange-400">
           <Image src={ResidentialIcon} alt="icon" />
           <p className="text-lg font-bold mt-2">Residential Plots</p>
         </div>
-        <div className="w-[180px] h-[180px] flex flex-col justify-center items-center rounded-full bg-[#baf2f7] hover:bg-[#026a74] cursor-pointer animate-pulse hover:animate-none my_shadow_for_icon hover:text-white">
+        <div className="w-[180px] h-[180px] flex flex-col justify-center items-center rounded-full bg-orange-600 cursor-pointer hover:animate-none my_shadow_for_icon hover:bg-orange-400">
           <Image src={CommercialIcon} alt="icon" />
           <p className="text-lg font-bold mt-2">Commercial Plots</p>
         </div>
-        <div className="w-[180px] h-[180px] flex flex-col justify-center items-center rounded-full bg-[#baf2f7] hover:bg-[#026a74] cursor-pointer animate-pulse hover:animate-none my_shadow_for_icon hover:text-white">
+        <div className="w-[180px] h-[180px] flex flex-col justify-center items-center rounded-full bg-orange-600 cursor-pointer hover:animate-none my_shadow_for_icon hover:bg-orange-400">
           <Image src={OpenPlotIcon} alt="icon" />
           <p className="text-lg font-bold mt-2">Open Land Plots</p>
         </div>

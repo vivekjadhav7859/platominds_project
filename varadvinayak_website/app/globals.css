@@ -62,9 +62,9 @@
 }
 
 .my_shadow_for_icon {
-  -webkit-box-shadow: 0 0 27.5px 3px #b5fff1;
-  -moz-box-shadow: 0 0 27.5px 3px #b5fff1;
-  box-shadow: 0 0 27.5px 3px #b5fff1;
+  -webkit-box-shadow: 0 0 27.5px 3px #e5f2ef;
+  -moz-box-shadow: 0 0 27.5px 3px #2f3131;
+  box-shadow: 0 0 27.5px 3px #181919;
 }
 
 .primary_bg {

@@ -1,8 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import ServicesApi from "../api/ServicesApi";
 
 const Services = () => {
@@ -14,7 +12,7 @@ const Services = () => {
         <h1 className="mt-[5rem] mb-2 text-center capitalize text-4xl font-bold text-orange-600">
           Our Services
         </h1>
-        <hr className="lg:w-1/5 w-1/3 md:w-1/5 mx-auto shadow-2xl" />
+        <hr className="lg:w-1/5 w-3/5 md:w-1/5 mx-auto shadow-2xl" />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-5 justify-items-center mt-10">
           {ServicesData.map((currElem: any, index) => {
