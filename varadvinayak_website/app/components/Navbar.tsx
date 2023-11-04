@@ -20,6 +20,10 @@ export default function Navbar() {
       link: "/about"
     },
     {
+      labe: "Gallery",
+      link: "/gallery"
+    },
+    {
       labe: "Contacts",
       link: "/contact"
     },
