@@ -1,12 +1,16 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
+import React from "react";
+import Banner from "../components/Banner";
+import ContactForm from "../components/ContactForm";
 
 const Contacts = () => {
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <>
+      <Banner />
+      <div className="container mx-auto p-8">
+        <ContactForm />
+      </div>
+    </>
+  );
+};
 
-export default Contacts
+export default Contacts;

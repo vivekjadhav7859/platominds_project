@@ -2,61 +2,64 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
+import logo from "../../public/Navbar/logo.png";
 import { FiMenu } from "react-icons/fi";
 import { IoCloseOutline } from "react-icons/io5";
-import clsx from "clsx";
 import Image from "next/image";
-import logo from '../../public/Navbar/logo.png'
+import clsx from "clsx";
+import { useRouter } from "next/navigation";
+
 export default function Navbar() {
   const [isSideMenuOpen, setMenu] = useState(false);
+
+  const router = useRouter();
+  const closeMenu = () => {
+    setMenu(false);
+  };
+  const handleLinkClick = (link: any) => {
+    closeMenu();
+    router.push(link);
+  };
 
   const navlinks = [
     {
       labe: "Home",
-      link: "/"
+      link: "/",
     },
     {
       labe: "About",
-      link: "/about"
-    },
-    {
-      labe: "Gallery",
-      link: "/gallery"
-    },
-    {
-      labe: "Contacts",
-      link: "/contact"
+      link: "/about",
     },
     {
       labe: "Services",
-      link: "/services"
-    }
+      link: "/services",
+    },
+    {
+      labe: "Contact",
+      link: "/contact",
+    },
   ];
 
   return (
     <main className="pt-16">
       <nav className="flex justify-between px-8 items-center py-3 bg-white  fixed top-0 w-full shadow-md z-[1000]">
         <div className="flex items-center gap-8">
-            <section className="flex items-center gap-4">
-                {/* menu */}
-                <FiMenu
-                onClick={() => setMenu(true)}
-                className="text-3xl cursor-pointer lg:hidden"
-                />
-                {/* logo */}
-                <Link href={"/"} className=" mr-12">
-                <Image
-                    src={logo}
-                    width={70}
-                    height={20}
-                    alt="logo"
-                />
-                </Link>
-            </section>
+          <section className="flex items-center gap-[60vw] md:gap-[80vw] ">
+            {/* menu */}
+            <FiMenu
+              onClick={() => setMenu(true)}
+              className="text-3xl cursor-pointer lg:hidden"
+            />
+
+            {/* logo */}
+            <Link href={"/"} className="text-4xl font-mono ml-auto">
+              <Image src={logo} width={70} height={20} alt="logo" />
+            </Link>
+          </section>
           {navlinks.map((d, i) => (
             <Link
-              key={`nav_${i}`}
-              className="hidden lg:block  text-gray-700 uppercase hover:text-orange-500 hover:font-bold"
+              key={i}
+              className="hidden lg:block font-medium  text-gray-800 hover:text-orange-500"
               href={d.link}
             >
               {d.labe}
@@ -73,22 +76,22 @@ export default function Navbar() {
         >
           <section className="text-black bg-white flex-col absolute left-0 top-0 h-screen p-8 gap-8 z-50 w-56 flex  ">
             <IoCloseOutline
-              onClick={() => setMenu(false)}
+              // onClick={() => setMenu(false)}
+              onClick={closeMenu}
               className="mt-0 mb-8 text-3xl cursor-pointer"
             />
 
             {navlinks.map((d, i) => (
-              <Link key={i} className="font-bold" href={d.link}>
+              <div
+                key={i}
+                className="font-bold"
+                onClick={() => handleLinkClick(d.link)}
+              >
                 {d.labe}
-              </Link>
+              </div>
             ))}
           </section>
         </div>
-
-        {/* last section */}
-        <section className="flex items-center gap-4">
-        </section>
-        
       </nav>
     </main>
   );

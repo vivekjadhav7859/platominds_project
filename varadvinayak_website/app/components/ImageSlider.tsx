@@ -25,7 +25,7 @@ const ImageSlider = () => {
               if (mouseOver) return;
               timeout = setTimeout(() => {
                 slider.next();
-              }, 1500);
+              }, 2500);
             }
             slider.on("created", () => {
               slider.container.addEventListener("mouseover", () => {
@@ -49,7 +49,7 @@ const ImageSlider = () => {
         {sliderImages.map((sliderImage, index) => (
           <div
             key={`sliderImg_${index}`}
-            className="keen-slider__slide w-[80vw] h-[30vh] lg:h-[70vh] p-1 "
+            className="keen-slider__slide w-[80vw] h-[30vh] lg:h-[80vh] p-1 "
           >
             <Image
               src={sliderImage}

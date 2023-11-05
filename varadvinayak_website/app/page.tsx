@@ -13,8 +13,8 @@ const ImageSlider = lazy(() => import("./components/ImageSlider"));
 export default function Home() {
   return (
     <section className="pt-10">
-      <Suspense fallback={<div>Loading...</div>}>
-        <ImageSlider />
+      <Suspense fallback={<div className="h-[80vh] w-full flex justify-center items-center animate-pulse">Loading...</div>}>
+      <ImageSlider/>
       </Suspense>
       <Suspense fallback={<div>Loading...</div>}>
         <Videos />
